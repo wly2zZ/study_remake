@@ -152,6 +152,10 @@ Bean的作用域
 
 ###  1.4 ioc操作Bean管理(注解管理)
 
+![1615626511826](spring5框架.assets/1615626511826.png)
+
+
+
 ![1614838453497](C:\Users\a\AppData\Roaming\Typora\typora-user-images\1614838453497.png)
 
 ![1614838583246](C:\Users\a\AppData\Roaming\Typora\typora-user-images\1614838583246.png)
