@@ -1,5 +1,11 @@
 #  spring5框架
 
+结构
+
+![1615981205057](spring5框架.assets/1615981205057.png)
+
+
+
 ##  1.ioc
 
 配置文件
@@ -307,4 +313,178 @@ Bean的作用域
 ### 2.6 AspectJ配置文件（了解）
 
 ![1615299238286](F:\桌面文件\wlyPPT\markdown\spring5框架.assets\1615299238286.png)
+
+
+
+##  3.数据源
+
+### 3.1 配置数据源
+
+1.导入包
+
+2.导入坐标
+
+![1615687707189](spring5框架.assets/1615687707189.png)
+
+### 3.2 抽取数据源
+
+jdbc.properties
+
+![1615687862307](spring5框架.assets/1615687862307.png)
+
+C3P0数据源
+
+![1615688070157](spring5框架.assets/1615688070157.png)
+
+方便解耦
+
+###  3.3 spring配置数据源（c3p0）
+
+xml文件 
+
+![1615688313439](spring5框架.assets/1615688313439.png)
+
+property的name 就是set方法的头字母小写
+
+**测试**
+
+![1615688425764](spring5框架.assets/1615688425764.png)
+
+
+
+如果要配置druid的话 property要注意name的名字
+
+
+
+![1615688585811](spring5框架.assets/1615688585811.png)
+
+### 3.4 jdbcTemplate
+
+![1615689750885](spring5框架.assets/1615689750885.png)
+
+![1615690595583](spring5框架.assets/1615690595583.png)
+
+
+
+###  3.5 spring产生jdbcTemplate对象
+
+![1615690843017](spring5框架.assets/1615690843017.png)
+
+spring代码：
+
+![1615691326970](spring5框架.assets/1615691326970.png)
+
+
+
+模板：
+
+![1615691563596](spring5框架.assets/1615691563596.png)
+
+
+
+省略![1615691707707](spring5框架.assets/1615691707707.png)
+
+![1615692082453](spring5框架.assets/1615692082453.png)
+
+![1615692261775](spring5框架.assets/1615692261775.png)
+
+jdbcTemplate.query（sql，new BeanPropertRowMapper<T>(类的字节码))
+
+T代表封装的实体类
+
+**单个查询**，queryForObjcet(sql=?，new BeanPropertRowMapper<T>(类的字节码),属性)
+
+
+
+**聚合查询，**
+
+![1615692525403](spring5框架.assets/1615692525403.png)
+
+###  3.6 知识要点
+
+![1615692655012](spring5框架.assets/1615692655012.png)
+
+jdbcTemplate new完之后要注入数据源才能用
+
+
+
+##  4.事务控制-编程式
+
+###  4.1 PlatformTransactionManger
+
+![1615980017923](spring5框架.assets/1615980017923.png)
+
+###  4.2 TransactionDefinition
+
+![1615980100343](spring5框架.assets/1615980100343.png)
+
+### 4.3 TransactionStatus
+
+## 5. 基于XML的声明式事务控制
+
+![1615981026923](spring5框架.assets/1615981026923.png)
+
+###  5.1 声明式事务控制的实现
+
+![1615981640961](spring5框架.assets/1615981640961.png)
+
+切点---目标对象就是切点 例如转账
+
+通知--事务的增强 
+
+![1615982214825](spring5框架.assets/1615982214825.png)
+
+![1615982262963](spring5框架.assets/1615982262963.png)
+
+![1615984206010](spring5框架.assets/1615984206010.png)
+
+## 6. 基于注解的声明式事务控制
+
+![1615984578074](spring5框架.assets/1615984578074.png)
+
+##  Spring集成web环境
+
+![1616235944194](spring5框架.assets/1616235944194.png)
+
+监听器：
+
+![1616236025318](spring5框架.assets/1616236025318.png)
+
+1 配置监听器 web/xml 
+
+![1616236534666](spring5框架.assets/1616236534666.png)
+
+获取：在doget或post
+
+![1616236581381](spring5框架.assets/1616236581381.png)
+
+![1616236593132](spring5框架.assets/1616236593132.png)
+
+
+
+
+
+在web xml里面取代 获取应用上下文 方便更改名字
+
+![1616236877270](spring5框架.assets/1616236877270.png)
+
+![1616237035363](spring5框架.assets/1616237035363.png)
+
+这是spring提供的监听器
+
+**使用方法**：
+
+ ![1616237183928](spring5框架.assets/1616237183928.png)
+
+![1616237257275](spring5框架.assets/1616237257275.png)
+
+
+
+![1616237311218](spring5框架.assets/1616237311218.png)
+
+
+
+
+
+
 
