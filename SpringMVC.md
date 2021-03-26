@@ -84,3 +84,37 @@ RequestMappint(value="/路径")
 
 ![1616246153099](SpringMVC.assets/1616246153099.png)
 
+##  4.文件上传
+
+![1616673511548](SpringMVC.assets/1616673511548.png)
+
+![1616673675724](SpringMVC.assets/1616673675724.png)
+
+![1616673743280](SpringMVC.assets/1616673743280.png)
+
+![1616673795939](SpringMVC.assets/1616673795939.png)
+
+##  5.拦截器
+
+![1616674171201](SpringMVC.assets/1616674171201.png)
+
+![1616674280549](SpringMVC.assets/1616674280549.png)
+
+![1616674488396](SpringMVC.assets/1616674488396.png)
+
+![1616675095970](SpringMVC.assets/1616675095970.png)
+
+##  6.异常
+
+![1616676637767](SpringMVC.assets/1616676637767.png)
+
+![1616676802610](SpringMVC.assets/1616676802610.png)
+
+![1616676862386](SpringMVC.assets/1616676862386.png)
+
+![1616677512285](SpringMVC.assets/1616677512285.png)、
+
+##  spring练习
+
+![1616677972860](SpringMVC.assets/1616677972860.png)
+
